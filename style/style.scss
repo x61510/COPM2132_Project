@@ -1,0 +1,48 @@
+
+$primary_color:#6a8bee;
+$secondary_color:grey;
+
+@mixin rounded-shaded-box($xoffset, $yoffset,$border-color){
+  box-shadow:$xoffset $yoffset 10px  $border-color;	  
+  border-radius:10px;    
+  
+}
+
+body {
+  
+  font-family: sans-serif;
+  background-color: $primary_color;
+  
+}
+h1 {
+  text-align: center;
+  color:$primary_color;
+  text-shadow: 5px 5px 15px $secondary_color;
+}
+main {
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    @include rounded-shaded-box(8px,8px,$primary_color);
+    min-height: 600px;
+}
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  @include rounded-shaded-box(1px,1px,$secondary_color);
+}
+button {
+  padding:10px;
+  @include rounded-shaded-box(3px,3px,$secondary_color);
+  outline:none;
+  border:none;
+  background-color:$primary_color;
+  cursor: pointer;
+  margin-bottom:20px;
+  
+}
+#winner {
+  font-size: 3rem;
+}

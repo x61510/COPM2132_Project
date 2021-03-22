@@ -4,35 +4,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Dice Game</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body >
-    <script src="script.js"></script>
-    <h1>Dice Game</h1>
-    <div id="container">
-    <h2>You &emsp; &emsp;&emsp;&emsp;  &emsp;Opponent</h2>
-    
-    <div style="float: left;">
-      
-    <image src="images/1.jpg" id="your_dice_1">
-    <image src="images/1.jpg" id="your_dice_2">
-    <h2 id="score_board1">0</h2>
-    
-    </div>
-
-    <div style="float: right;">
-    <image src="images/2.jpg" id="bot_dice_1">
-    <image src="images/1.jpg" id="bot_dice_2">
-    <h2 id="score_board2">0</h2>
-    </div>
-    </div>
-
-    <div>
-      <button onclick="roll()">Roll Dice</button>
-      <button onclick="new_game()">New Game</button>
+    <main>
+    <h1>DICE GAME</h1>
+    <div class="container">
+      <div>
+        <h2>You</h2>
+        
+            <image src="images/0.jpg" id="your_dice_1">
+            <image src="images/0.jpg" id="your_dice_2">
+            <h4 >This round: </h4>
+            <p id="this_round1">0</p>
+            <h4 >Total score:</h4>
+            <p id="total_score1">0</p>
+            <button onclick="new_game()">New Game</button>
       </div>
+      <div>
+        <h2>Computer</h2>
+        <image src="images/0.jpg" id="bot_dice_1">
+        <image src="images/0.jpg" id="bot_dice_2">
+        <h4>This round:</h4>
+        <p id="this_round2">0</p>
+        <h4>Total score:</h4>
+        <p id="total_score2">0</p>
+        <button onclick="roll()">Roll Dice</button>
+      </div>
+    </div>
 
-    <h2 id="winner"></h2>
+    <h1 id="winner">&nbsp</h1>
+
     
+  </main>
+  <script src="script/jquery-3.4.1.min.js"></script>
+  <script src="script/script.js"></script>
   </body>
+  
 </html>
